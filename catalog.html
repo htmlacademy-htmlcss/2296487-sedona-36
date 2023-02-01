@@ -29,17 +29,17 @@
 
       <ul class="user-navigation-list">
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link heart" href="#">
             <span class="visually-hidden">Добавить в избранное</span>
           </a>
         </li>
       </ul>
-      <button class="button" type="button">Хочу сюда!</button>
+      <button class="button nav-button" type="button">Хочу сюда!</button>
 
     </nav>
   </header>
@@ -51,8 +51,12 @@
       <h2 class="filter-title">Гостиницы Седоны</h2>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a href="index.html" class="breadcrumbs-link">
+          <a href="index.html" class="breadcrumbs-link home">
             <span class="visually-hidden">Домой</span>
+          </a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link arrow">
           </a>
         </li>
         <li class="breadcrumbs-item">
@@ -62,7 +66,7 @@
 
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="filter-infrastucture">
-          <legend>Инфраструктура:</legend>
+          <legend class="legend-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
@@ -86,7 +90,7 @@
         </fieldset>
 
         <fieldset class="type-of-housing">
-          <legend>Тип жилья:</legend>
+          <legend class="legend-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
@@ -110,7 +114,7 @@
         </fieldset>
 
         <fieldset class="filter-price">
-          <legend>Стоимость, ₽:</legend>
+          <legend class="legend-title">Стоимость, ₽:</legend>
           <label class="price">
             <span class="visually-hidden">цена от</span>
             <input type="number" class="price-number" placeholder="от">

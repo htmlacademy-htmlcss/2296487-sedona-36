@@ -45,12 +45,14 @@ body {
 }
 
 .search {
+  display: block;
   background: url("../images/icons/search.svg") left no-repeat;
   width: 20px;
   height: 20px;
 }
 
 .heart {
+  display: block;
   background: url("../images/icons/heart.svg")left no-repeat;
   width: 18px;
   height: 17px;
@@ -227,3 +229,62 @@ input::placeholder {
 .html-academy-logo {
   display: block;
 }
+
+.filter {
+  display: block;
+  position: relative;
+  width: 1200px;
+  height: 412px;
+  background: url("../images/filter-background.jpg") center no-repeat;
+  color: #ffffff;
+}
+
+.filter-title {
+  position: absolute;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  width: 114px;
+  height: 21px;
+  display: flex;
+  position: absolute;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.breadcrumbs-link.home {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url("../images/icons/home.svg") center no-repeat;
+}
+
+.breadcrumbs-link.arrow {
+  display: block;
+  width: 6.39px;
+  height: 9.94px;
+  background: url("../images/icons/arrow.svg")
+center no-repeat;
+}
+
+.catalog-filter {
+  display: flex;
+  position: absolute;
+  top: 182px;
+  left: 70px;
+}
+
+.legend-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
