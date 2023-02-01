@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
@@ -27,17 +28,17 @@
 
       <ul class="user-navigation-list">
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link search" href="#">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="user-navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link heart" href="#">
             <span class="visually-hidden">Добавить в избранное</span>
           </a>
         </li>
       </ul>
-      <button class="button" type="button">Хочу сюда!</button>
+      <button class="button nav-button" type="button">Хочу сюда!</button>
 
     </nav>
   </header>
@@ -58,10 +59,11 @@
 
       <ul class="advantages-list">
         <li class="advantages-item blue">
-          <h3 class="item-title">Настоящий городок</h3>
+          <h3 class="item-title white">Настоящий городок</h3>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         </li>
-        <li class="advantages-item-image"><img src="images/city.jpg" width="800" height="384" alt="Фото городка Седона"></li>
+        <li class="advantages-item-image"><img src="images/city.jpg" width="800" height="384" alt="Фото городка Седона">
+        </li>
         <li class="advantages-item">
           <h3 class="item-title">Небольшая площадь</h3>
           <p>Все достопримечательности находятся очень близко</p>
@@ -74,9 +76,10 @@
           <h3 class="item-title">Мало туристов</h3>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </li>
-        <li class="advantages-item-image"><img src="images/bridge.jpg" width="800" height="385" alt="Фото моста Дьявола в горах"></li>
+        <li class="advantages-item-image"><img src="images/bridge.jpg" width="800" height="385" alt="Фото моста Дьявола в горах">
+        </li>
         <li class="advantages-item blue">
-          <h3 class="item-title">Там есть мост дьявола</h3>
+          <h3 class="item-title white">Там есть мост дьявола</h3>
           <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
         </li>
       </ul>
@@ -115,21 +118,21 @@
         <p class="review-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </div>
 
-      <button class="button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+      <button class="button search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
     </section>
 
     <section class="subscribe" data-test="subscribe">
       <h2 class="visually-hidden">Подписка на рассылку</h2>
       <div class="section-review white">
-        <p class="review-title">Подпишитесь на рассылку</p>
+        <p class="review-title white">Подпишитесь на рассылку</p>
         <p class="review-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
       </div>
 
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="subscribe-email">email</label>
+        <label class="visually-hidden" for="subscribe-email">email</label>
         <input type="email" id="subscribe-email" name="subscribe-email" class="subscribe-field" placeholder="Ваш e-mail" required>
         <button class="button subscribe-button" type="submit">
-          <span class="visually-hidden">Подписаться</span>
+          <span>Подписаться</span>
         </button>
       </form>
     </section>
@@ -140,15 +143,15 @@
     <h2 class="visually-hidden">Контактная информация</h2>
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a href="#" class="button social">
+        <a href="#" class="social-vkontakte">
           <span class="visually-hidden">Вконтакте</span>
         </a>
       <li class="footer-social-item">
-        <a href="#" class="button social">
+        <a href="#" class="social-telegram">
           <span class="visually-hidden">Telegram</span>
         </a>
       <li class="footer-social-item">
-        <a href="#" class="button social">
+        <a href="#" class="social-youtube">
           <span class="visually-hidden">Youtube</span>
         </a>
       </li>
