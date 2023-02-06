@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
   <div class="main-container">
-    <header class="page-header page-container" data-test="header">
+    <header class="page-header" data-test="header">
       <nav class="main-navigation">
 
         <a class="navigation-logo">
@@ -43,7 +43,7 @@
       </nav>
     </header>
 
-    <main class="page-main" data-test="main">
+    <main class="page-main page-container" data-test="main">
 
       <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Отдых в Седоне</h1>
@@ -94,19 +94,25 @@
 
         <ul class="services-list">
           <li class="services-item">
-            <img src="images/icons/house.svg" width="75" height="72" alt="Иконка домика">
-            <h3 class="item-title">Жильё</h3>
-            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <div class="services-container">
+              <img class="services-icon" src="images/icons/house.svg" width="75" height="72" alt="Иконка домика">
+              <h3 class="item-title">Жильё</h3>
+              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </div>
           </li>
           <li class="services-item">
-            <img src="images/icons/food.svg" width="74" height="70" alt="Иконка бургера">
-            <h3 class="item-title">Еда</h3>
-            <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <div class="services-container">
+              <img class="services-icon" src="images/icons/food.svg" width="74" height="70" alt="Иконка бургера">
+              <h3 class="item-title">Еда</h3>
+              <p>Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            </div>
           </li>
           <li class="services-item">
-            <img src="images/icons/box.svg" width="64" height="76" alt="Иконка подарка">
-            <h3 class="item-title">Сувениры</h3>
-            <p>Не только китайского, но и настоящего местного производства!</p>
+            <div class="services-container">
+              <img class="services-icon" src="images/icons/box.svg" width="64" height="76" alt="Иконка подарка">
+              <h3 class="item-title">Сувениры</h3>
+              <p>Не только китайского, но и настоящего местного производства!</p>
+            </div>
           </li>
         </ul>
       </section>
