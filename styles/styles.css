@@ -57,6 +57,8 @@ body {
   flex-grow: 1;
 }
 
+/*  Navigation  */
+
 .main-navigation {
   display: flex;
   align-items: center;
@@ -86,12 +88,26 @@ body {
 
 .navigation-link {
   display: block;
+  position: relative;
   padding: 20px 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+}
+
+.navigation-link.current::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: auto;
+  height: 2px;
+  top: 63px;
+  left: 16px;
+  right: 16px;
+  z-index: 1;
+  background-color: #756257;
 }
 
 .user-navigation-list {
@@ -135,6 +151,8 @@ body {
   border-radius: 4px;
 }
 
+/*  Hero  */
+
 .hero {
   background: url("../images/hero-background.jpg") center no-repeat;
   background-size: 1200px 485px;
@@ -155,6 +173,8 @@ body {
   z-index: 1;
 }
 
+/*  Section review  */
+
 .section-review {
   display: flex;
   flex-direction: column;
@@ -162,9 +182,6 @@ body {
   align-items: center;
 }
 
-.section-review.white {
-  color: #ffffff;
-}
 
 .review-sedona {
   min-height: 261px;
@@ -196,6 +213,8 @@ body {
   font-size: 22px;
   line-height: 26px;
 }
+
+/*  Section advantages  */
 
 .advantages-list {
   margin: 0;
@@ -289,6 +308,8 @@ body {
   color: #000000;
 }
 
+/*  Section services  */
+
 .review-services {
   min-height: 246px;
 }
@@ -340,7 +361,9 @@ body {
   margin-bottom: 30px;
 }
 
-.review-hotel {
+/*  Section hotel-look  */
+
+.hotel-look {
   min-height: 406px;
 }
 
@@ -366,8 +389,26 @@ body {
   border-radius: 4px;
 }
 
-.subscribe-background {
-  background: url("../images/subscribe-background.jpg") center no-repeat;
+/*  Section subscribe  */
+
+.subscribe {
+  min-height: 415px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/subscribe-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.subscribe .review-title {
+  margin-top: 96px;
+}
+
+.subscribe .review-text {
+  max-width: 475px;
+  margin-bottom: 54px;
+  color: #ffffff;
 }
 
 .subscribe-form {
@@ -384,50 +425,67 @@ input::placeholder {
 
 .subscribe-field {
   width: 452px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  background-color: #F2F2F2;
+  border-radius: 4px 0 0 4px;
+  border-width: 0;
 }
 
 .subscribe-button {
-  width: 232px;
+  min-width: 232px;
+  min-height: 52px;
   background-color: #82B3D3;
   color: #ffffff;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  text-transform: uppercase;
+  border-radius: 0 4px 4px 0;
+  border-width: 0;
 }
 
+/*  Footer  */
+
 .page-footer {
-  margin: 0 auto;
+  margin: 40px 70px 30px;
   width: 1060px;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-social-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
-  width: 142px;
-  justify-content: space-around;
+  min-width: 142px;
+  max-height: 40px;
 }
 
+
 .social-vkontakte {
-  display: block;
-  width: 24px;
-  height: 14px;
-  background: url("../images/icons/vkontakte.svg") no-repeat;
+  display: inline-block;
+  width: 47px;
+  height: 40px;
+  background: url("../images/icons/vkontakte.svg") center no-repeat;
 }
 
 .social-telegram {
-  display: block;
-  width: 18px;
-  height: 15.1px;
-  background: url("../images/icons/telegram.svg") no-repeat;
+  display: inline-block;
+  width: 47px;
+  height: 40px;
+  background: url("../images/icons/telegram.svg") center no-repeat;
 }
 
 .social-youtube {
-  display: block;
-  width: 22px;
-  height: 17px;
-  background: url("../images/icons/youtube.svg") no-repeat;
+  display: inline-block;
+  width: 47px;
+  height: 40px;
+  background: url("../images/icons/youtube.svg") center no-repeat;
 }
 
 .footer-phone {
@@ -438,9 +496,15 @@ input::placeholder {
   color: #000000;
 }
 
+
 .html-academy-logo {
-  display: block;
+  margin: 0;
+  padding: 0;
+  width: 115px;
+  height: 33px;
 }
+
+/*  <--- Catalog page ---> */
 
 .filter {
   display: block;

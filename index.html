@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
+
   <body>
   <div class="main-container">
     <header class="page-header" data-test="header">
@@ -24,7 +25,7 @@
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
-        </ul>
+        </ul>    <!--navigation-list-->
 
         <ul class="user-navigation-list">
           <li class="user-navigation-item">
@@ -37,7 +38,8 @@
               <span class="visually-hidden">Добавить в избранное</span>
             </a>
           </li>
-        </ul>
+        </ul>    <!--user-navigation-list-->
+
         <button class="button nav-button" type="button">Хочу сюда!</button>
 
       </nav>
@@ -52,10 +54,11 @@
 
       <section class="advantages" data-test="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
+
         <div class="section-review review-sedona">
           <p class="review-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
           <p class="review-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-        </div>
+        </div>    <!--section-review-->
 
         <ul class="advantages-list">
           <li class="advantages-item blue">
@@ -94,8 +97,8 @@
               <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
           </li>
-        </ul>
-      </section>
+        </ul>      <!--advantages-list-->
+      </section>   <!--advantages section-->
 
       <section class="services">
         <h2 class="visually-hidden">Услуги и сервис</h2>
@@ -126,25 +129,22 @@
               <p>      Не только китайского,        но и настоящего местного производства!</p>
             </div>
           </li>
-        </ul>
-      </section>
+        </ul>     <!--services-list-->
+      </section>  <!--services section-->
 
-      <section class="hotel-look" data-test="search">
+      <section class="hotel-look section-review" data-test="search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <div class="section-review review-hotel">
-          <p class="review-title">Заинтересовались?</p>
-          <p class="review-text review-hotel-text">                 Укажите предполагаемые даты поездки,                 и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="button search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
-        </div>
-      </section>
 
-      <section class="subscribe subscribe-background" data-test="subscribe">
+        <p class="review-title">Заинтересовались?</p>
+        <p class="review-text review-hotel-text">                 Укажите предполагаемые даты поездки,                 и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="button search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+      </section>  <!--hotel-look section-->
+
+      <section class="subscribe" data-test="subscribe">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <div class="section-review white">
-          <p class="review-title white">Подпишитесь на рассылку</p>
-          <p class="review-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        </div>
 
+        <p class="review-title white">Подпишитесь на рассылку</p>
+        <p class="review-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">email</label>
           <input type="email" id="subscribe-email" name="subscribe-email" class="subscribe-field" placeholder="Ваш e-mail" required>
@@ -152,7 +152,8 @@
             <span>Подписаться</span>
           </button>
         </form>
-      </section>
+
+      </section> <!--subscribe section-->
 
     </main>
 
@@ -172,14 +173,14 @@
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
-      </ul>
+      </ul>  <!--footer-social-list-->
 
       <a href="tel:+78128121212" class="footer-phone">+7 (812) 812-12-12</a>
 
       <a href="https://htmlacademy.ru/" class="html-academy-logo">
-        <img src=images/logo_htmlacademy.svg width="114.9" height="32.9" alt="Логотип Html academy">
+        <img src=images/logo_htmlacademy.svg width="115" height="33" alt="Логотип Html academy">
       </a>
     </footer>
-  </div>
+  </div> <!--  main-container-->
 </body>
 </html>
