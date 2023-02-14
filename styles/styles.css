@@ -968,12 +968,21 @@ input::placeholder {
   background-color: #ffffff;
 }
 
-.pagination-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.pagination-item p {
+  display: inline-block;
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 18px;
   width: 60px;
-  height: 60px;
+  height: 26px;
+}
+
+.pagination-link {
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  width: 60px;
+  height: 36px;
   text-decoration: none;
   color: #FFFFFF;
   font-weight: 700;
