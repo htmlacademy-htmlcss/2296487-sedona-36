@@ -801,8 +801,8 @@ input::placeholder {
   width: 1060px;
   position: relative;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
 }
 
