@@ -726,14 +726,148 @@ input::placeholder {
   list-style: none;
 }
 
+
 .filter-price {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
   width: 288px;
   display: flex;
+  flex-direction: column;
+}
+
+.filter-price:before {
+  content: "от";
+  position: absolute;
+  top: 12px;
+  left: 106px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.filter-price:after {
+  content: "до";
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.legend-title {
+  margin-bottom: 32px;
+}
+
+.filter-price-inputs {
+  display: flex;
   flex-direction: row;
+  margin-bottom: 44px;
 }
 
 .price-number {
+  margin: 0;
+  padding: 12px 20px;
   width: 143px;
+  box-sizing: border-box;
+  font: inherit;
+  font-weight: 700;
+  background-color: #F2F2F2;
+  border: 2px solid #F2F2F2;
+  border-radius: 0 4px 4px 0;
+}
+
+.price-number::placeholder {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  opacity: 1;
+}
+
+.price-number::-webkit-inner-spin-button,
+.price-number::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+
+.price-number.from {
+  margin-right: 2px;
+  border-radius: 4px 0 0 4px;
+}
+
+.price-number::placeholder {
+  margin-left: auto;
+}
+
+.price-number:hover {
+  background-color: #E6E6E6;
+}
+
+.price-number:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.price-number:not(:placeholder-shown) {
+  background-color: #F2F2F2;
+  border: 2px solid #000000;
+  outline: none;
+}
+
+.price-range {
+  position: relative;
+  height: 4px;
+  min-width: 288px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
 }
 
 .filter-buttons {
@@ -744,12 +878,12 @@ input::placeholder {
 
 .filter-submit-button {
   min-width: 191px;
-  height: 36px;
+  min-height: 36px;
   margin: 0;
-  padding: 8px 50px;
   background-color: #82B3D3;
   color: #ffffff;
   font-weight: 700;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -758,11 +892,13 @@ input::placeholder {
 }
 
 .filter-reset-button {
+  margin-top: 32px;
   min-width: 191px;
-  height: 36px;
+  min-height: 36px;
   background-color: inherit;
   color: #ffffff;
   font-weight: 700;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -824,12 +960,11 @@ input::placeholder {
 }
 
 .layout-button {
-  display: inline-block;
-  padding: 15px 14px;
-  width: 16px;
-  height: 14px;
+  width: 48px;
+  height: 48px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .layout-button.active {

@@ -124,14 +124,27 @@
             <div class="catalog-filter-right">
               <fieldset class="filter-price">
                 <legend class="legend-title">Стоимость, ₽:</legend>
-                <label class="price">
-                  <span class="visually-hidden">цена от</span>
-                  <input type="number" class="price-number" placeholder="от">
-                </label>
-                <label class="price">
-                  <span class="visually-hidden">цена до</span>
-                  <input type="number" class="price-number" placeholder="до">
-                </label>
+                <div class="filter-price-inputs">
+                  <label class="price">
+                    <span class="visually-hidden">цена от</span>
+                    <input type="number" class="price-number from" placeholder="0">
+                  </label>
+                  <label class="price">
+                    <span class="visually-hidden">цена до</span>
+                    <input type="number" class="price-number" placeholder="9000">
+                  </label>
+                </div>
+
+                <div class="price-range">
+                  <div class="range-bar" style="left: 0; width: 226px">
+                    <button type="button" class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button type="button" class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
               </fieldset>
 
               <div class="filter-buttons">
@@ -155,21 +168,18 @@
           </select>
           <ul class="cards-layouts">
             <li class="card-layout">
-              <a href="#" class="layout-button table active">
-                <span class="visually-hidden">Таблица</span>
-              </a>
+              <button class="layout-button table active" type="button"></button>
+              <span class="visually-hidden">Таблица</span>
             </li>
 
             <li class="card-layout">
-              <a href="#" class="layout-button slide-show">
-                <span class="visually-hidden">Слайд-шоу</span>
-              </a>
+              <button class="layout-button slide-show" type="button"></button>
+              <span class="visually-hidden">Слайд-шоу</span>
             </li>
 
             <li class="card-layout">
-              <a href="#" class="layout-button list">
-                <span class="visually-hidden">Список</span>
-              </a>
+              <button class="layout-button list" type="button"></button>
+              <span class="visually-hidden">Список</span>
             </li>
           </ul>     <!--cards-layouts-->
         </div>      <!--select-options-->
