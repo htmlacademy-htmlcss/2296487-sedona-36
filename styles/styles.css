@@ -615,6 +615,7 @@ body {
   fill: rgba(117, 97, 87, 0.3);
 }
 
+/*  Modal-window  */
 
 .modal-container {
   position: fixed;
@@ -634,12 +635,24 @@ body {
 .modal-search {
   width: 717px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: auto;
   padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-title {
+  margin: 0 0 64px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .modal-close-button {
@@ -651,6 +664,7 @@ body {
   background-color: #F2F2F2;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 }
 
 .modal-close-button:before,
@@ -686,6 +700,119 @@ body {
   background-color: #E6E6E6;
   opacity: 0.3;
   outline: none;
+}
+
+.check-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-date {
+  margin-bottom: 48px;
+  min-height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.check-title {
+  width: 137px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.check-input {
+  width: 440px;
+  min-height: 48px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  align-self: flex-start;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  border: none;
+  outline: none;
+}
+
+.check-input::placeholder {
+  color: #000000;
+}
+
+.check-date-icon {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  width: 16px;
+  height: 15px;
+  background: url("../images/icons/calendar.svg") center no-repeat;
+  opacity: 0.3;
+}
+
+.message {
+  position: absolute;
+  top: 52px;
+  left: 157px;
+  font-size: 16px;
+  line-height: 21px;
+  background-color: #ffffff;
+}
+
+.message.error {
+  color: #FF5757;
+  z-index: 3;
+}
+
+.message.success {
+  color: #333333;
+  z-index: 2;
+}
+
+.message.close {
+  display: none;
+}
+
+.guests-number {
+  min-height: 48px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number-input {
+  width: 110px;
+  box-sizing: border-box;
+  padding: 14px 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.number-input::placeholder {
+  text-align: center;
+}
+
+.check-title.children {
+  width: 131px;
+  margin-left: auto;
+}
+
+.increase-number {
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
 }
 
 /*  <--- Catalog page --->  */
@@ -1194,7 +1321,7 @@ body {
 
 .product-card {
   width: 340px;
-  height: 438px;
+  min-height: 438px;
   padding: 20px;
   display: flex;
   box-sizing: border-box;
