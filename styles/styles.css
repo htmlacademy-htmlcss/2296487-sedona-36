@@ -493,21 +493,24 @@ body {
   width: 684px;
 }
 
-.subscribe-form input::placeholder {
-  padding: 14px 0;
+.subscribe-field {
+  flex-grow: 1;
+  padding: 14px 0 14px 20px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #F2F2F2;
+  border-radius: 4px 0 0 4px;
+  border-width: 0;
+}
+
+.subscribe-field::placeholder {
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   opacity: 0.6;
-}
-
-.subscribe-field {
-  flex-grow: 1;
-  padding: 14px 0 14px 20px;
-  background-color: #F2F2F2;
-  border-radius: 4px 0 0 4px;
-  border-width: 0;
 }
 
 .subscribe-button {
@@ -1576,6 +1579,7 @@ body {
 }
 
 .rating-number {
+  margin: 0;
   display: inline-block;
   box-sizing: border-box;
   text-align: center;
