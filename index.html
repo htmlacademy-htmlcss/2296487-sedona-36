@@ -168,7 +168,7 @@
     </footer>
   </div> <!--  main-container-->
 
-  <div class="modal-container">
+  <div class="modal-container close">
     <div class="modal-search">
       <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
       <button class="modal-close-button">
@@ -178,43 +178,52 @@
       <form class="check-form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="check-date">
           <label class="check-title" for="check-in-date">Дата заезда:</label>
-          <input class="check-input" type="text" id="check-in-date" placeholder="27 апреля 2020">
+          <input class="check-input" type="text" id="check-in-date" placeholder="Укажите дату">
           <a href="#" class="check-date-icon">
             <span class="visually-hidden">Выбрать дату в календаре</span>
           </a>
           <span class="message error">Мы не можем отправить вас в прошлое.</span>
-        </div>
+        </div>  <!--  check-date  -->
 
         <div class="check-date">
           <label class="check-title" for="check-out-date">Дата выезда:</label>
-          <input class="check-input" type="text" id="check-out-date" placeholder="1 сентября 2021">
+          <input class="check-input" type="text" id="check-out-date" placeholder="Укажите дату">
           <a href="#" class="check-date-icon">
             <span class="visually-hidden">Выбрать дату в календаре</span>
           </a>
           <span class="message success">На эти даты есть свободные номера. Пока есть.</span>
-        </div>
+        </div>  <!--  check-date  -->
 
         <div class="guests-number">
-          <label class="check-title" for="adults-number">Взрослые:</label>
-          <input class="check-input number-input" type="text" id="adults-number" placeholder="2">
-          <a href="#" class="increase-number">
-            <span class="visually-hidden">Увеличить количество взрослых</span>
-          </a>
-          <a href="#" class="decrease-number">
-            <span class="visually-hidden">Уменьшить количество взрослых</span>
-          </a>
+          <div class="guests-container">
+            <label class="check-title" for="adults-number">Взрослые:</label>
+            <input class="check-input number-input" type="text" id="adults-number" placeholder="2">
+            <a href="#" class="decrease-number">
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+            </a>
+            <a href="#" class="increase-number">
+              <span class="visually-hidden">Увеличить количество взрослых</span>
+            </a>
+          </div>    <!--  guests-container  -->
 
-          <label class="check-title children" for="children-number">Дети:</label>
-          <input class="check-input number-input" type="text" id="children-number" placeholder="2">
-          <a href="#" class="increase-number">
-            <span class="visually-hidden">Увеличить количество детей</span>
-          </a>
-          <a href="#" class="decrease-number">
-            <span class="visually-hidden">Уменьшить количество детей</span>
-          </a>
-        </div>
-      </form>
-    </div>
-  </div>
+          <div class="guests-container">
+            <label class="check-title children" for="children-number">Дети:</label>
+            <span class="tooltip" aria-labelledby="tooltip-label-children">
+              <button class="tooltip-button" type="button"></button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>  <!--  span tooltip  -->
+            <input class="check-input number-input" type="text" id="children-number" placeholder="2">
+            <a href="#" class="decrease-number">
+              <span class="visually-hidden">Уменьшить количество детей</span>
+            </a>
+            <a href="#" class="increase-number">
+              <span class="visually-hidden">Увеличить количество детей</span>
+            </a>
+          </div>  <!--  guests-container  -->
+        </div>    <!--    guests-number    -->
+        <button class="blue-button modal-find-button" type="submit">Найти</button>
+      </form>  <!--      check-form    -->
+    </div>  <!--    modal-search  -->
+  </div> <!--  modal-container  -->
 </body>
 </html>
