@@ -21,12 +21,16 @@ html {
 body {
   margin: 0;
   height: 100%;
-
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color: #f2f2f2;
+}
+
+.img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 
@@ -205,7 +209,7 @@ body {
 /*  Hero  */
 
 .hero {
-  background: url("../images/hero-background.jpg") center no-repeat;
+  background: url("../images/hero-background.jpg") center no-repeat #000000;
   background-size: 1200px 485px;
   padding: 51px 371px 82px;
   position: relative;
@@ -340,8 +344,7 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.advantages-item p,
-.advantages-item-image p {
+.advantages-text {
   margin: 0;
   max-width: 240px;
 }
@@ -471,9 +474,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../images/subscribe-background.jpg");
+  background: url("../images/subscribe-background.jpg") no-repeat #000000;
   background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.subscribe-white {
+  background: #ffffff;
 }
 
 .subscribe .review-title {
@@ -642,6 +648,8 @@ body {
   z-index: 3;
 }
 
+/* класс close у modal-container для скрытия окна  */
+
 .modal-container.close {
   display: none;
 }
@@ -668,6 +676,8 @@ body {
   text-transform: uppercase;
   color: #000000;
 }
+
+/*  кнопка для закрытия модального окна  */
 
 .modal-close-button {
   width: 52px;
@@ -715,6 +725,8 @@ body {
   opacity: 0.3;
   outline: none;
 }
+
+/*  Modal Form  */
 
 .check-form {
   display: flex;
@@ -787,6 +799,8 @@ body {
   opacity: 0.3;
 }
 
+/*  Информационные и error сообщения  */
+
 .message {
   position: absolute;
   top: 52px;
@@ -809,6 +823,8 @@ body {
 .message.close {
   display: none;
 }
+
+/*  Форма с указанием количества человек  */
 
 .guests-number {
   min-height: 48px;
@@ -860,6 +876,7 @@ body {
 .tooltip-button:hover + .tooltip-text,
 .tooltip-button:focus + .tooltip-text {
   opacity: 1;
+  z-index: 3;
 }
 
 .tooltip-text {
@@ -975,12 +992,13 @@ body {
   background-color: #82b3d3;
   color: #ffffff;
   font-weight: 700;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
   border-width: 0;
   border-radius: 10px;
+  z-index: 2;
 }
 
 .blue-button.modal-find-button:active {
@@ -994,10 +1012,8 @@ body {
 .filter {
   width: 1200px;
   min-height: 412px;
-  background-image: url("../images/filter-background.jpg");
-  background-position: center;
+  background: url("../images/filter-background.jpg") center no-repeat #000000;
   background-size: cover;
-  background-repeat: no-repeat;
   color: #ffffff;
 }
 
@@ -1117,6 +1133,8 @@ body {
   margin-bottom: 0;
 }
 
+/*  Checkbox  */
+
 .control {
   position: relative;
   display: block;
@@ -1148,6 +1166,8 @@ body {
   content: url("../images/icons/check.svg");
 }
 
+/*  Radio  */
+
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
 }
@@ -1174,6 +1194,8 @@ body {
 .control:active {
   opacity: 0.3;
 }
+
+/*  Price Filter  */
 
 .catalog-filter-right {
   width: 549px;
@@ -1245,20 +1267,6 @@ body {
   opacity: 1;
 }
 
-.price-number::-webkit-inner-spin-button,
-.price-number::-webkit-outer-spin-button {
-  margin: 0;
-  appearance: none;
-}
-
-.price input[type="number"],
-.price input[type="number"]:hover,
-.price input[type="number"]:focus {
-  appearance: none;
-  -moz-appearance: textfield;
-}
-
-
 .price-number.from {
   margin-right: 2px;
   border-radius: 4px 0 0 4px;
@@ -1278,6 +1286,25 @@ body {
   border: 2px solid #000000;
   outline: none;
 }
+
+/*  Убираем дефолтные spin-button в браузерах  */
+
+.price-number::-webkit-inner-spin-button,
+.price-number::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.price input[type="number"],
+.price input[type="number"]:hover,
+.price input[type="number"]:focus {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+/*  Price-range bar + toggle  */
 
 .price-range {
   position: relative;
@@ -1325,6 +1352,8 @@ body {
   right: 0;
 }
 
+/*  Filter Buttons  */
+
 .filter-buttons {
   display: flex;
   flex-direction: column;
@@ -1338,7 +1367,7 @@ body {
   background-color: #82b3d3;
   color: #ffffff;
   font-weight: 700;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -1353,7 +1382,7 @@ body {
   background-color: inherit;
   color: #ffffff;
   font-weight: 700;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -1386,6 +1415,8 @@ body {
   text-transform: uppercase;
 }
 
+/*  Select Form  */
+
 .select-control {
   width: 292px;
   height: 49px;
@@ -1400,10 +1431,9 @@ body {
   color: #333333;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  -webkit-appearance: none;
   appearance: none;
-  background-image: url("../images/icons/arrow-select.svg");
-  background-repeat: no-repeat;
-  background-position: right 20px center;
+  background: url("../images/icons/arrow-select.svg") no-repeat right 20px center;
   outline: none;
 }
 
@@ -1420,6 +1450,8 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.3);
   opacity: 0.3;
 }
+
+/*  Card Grid Toggle Buttons  */
 
 .cards-layouts {
   display: grid;
@@ -1540,7 +1572,6 @@ body {
   margin: 0 0 16px;
   padding: 0;
   width: 300px;
-
   display: flex;
   justify-content: space-between;
 }
@@ -1595,6 +1626,7 @@ body {
   width: 300px;
   min-height: 37px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
@@ -1708,11 +1740,6 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-
-.subscribe-white {
-  background: #ffffff;
-}
-
 /*  Buttons  */
 
 .brown-button,
@@ -1797,3 +1824,4 @@ body {
 .transparent-button:disabled {
   opacity: 0.1;
 }
+
