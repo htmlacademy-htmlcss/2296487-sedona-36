@@ -875,8 +875,8 @@ body {
 
 .tooltip-button:hover + .tooltip-text,
 .tooltip-button:focus + .tooltip-text {
+  z-index: 2;
   opacity: 1;
-  z-index: 3;
 }
 
 .tooltip-text {
@@ -896,7 +896,8 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   opacity: 0;
-  transition: opacity 0.3s linear;
+  z-index: -1;
+  transition: opacity 0.4s linear;
 }
 
 .tooltip-text::after {
@@ -998,7 +999,6 @@ body {
   text-transform: uppercase;
   border-width: 0;
   border-radius: 10px;
-  z-index: 2;
 }
 
 .blue-button.modal-find-button:active {
