@@ -177,7 +177,7 @@
     </footer>
   </div> <!--  main-container-->
 
-  <div class="modal-container close">
+  <div class="modal-container">
     <div class="modal-search">
       <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
       <button class="modal-close-button" type="button">
@@ -206,13 +206,13 @@
         <div class="guests-number">
           <div class="guests-container">
             <label class="check-title" for="adults-number">Взрослые:</label>
-            <input class="check-input number-input" type="text" id="adults-number" name="number-of-adults" placeholder="2">
-            <a href="#" class="decrease-number">
+            <button type="button" onclick="this.nextElementSibling.stepDown()" class="decrease-number">
               <span class="visually-hidden">Уменьшить количество взрослых</span>
-            </a>
-            <a href="#" class="increase-number">
+            </button>
+            <input class="check-input number-input" min="0" max="100" type="number" id="adults-number" name="number-of-adults" placeholder="2">
+            <button type="button" onclick="this.previousElementSibling.stepUp()" class="increase-number">
               <span class="visually-hidden">Увеличить количество взрослых</span>
-            </a>
+            </button>
           </div>    <!--  guests-container  -->
 
           <div class="guests-container">
@@ -222,13 +222,13 @@
               <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </span>  <!--  span tooltip  -->
 
-            <input class="check-input number-input" type="text" id="children-number" name="number-of-children" placeholder="2">
-            <a href="#" class="decrease-number">
+            <button type="button" onclick="this.nextElementSibling.stepDown()" class="decrease-number">
               <span class="visually-hidden">Уменьшить количество детей</span>
-            </a>
-            <a href="#" class="increase-number">
+            </button>
+            <input class="check-input number-input" min="0" max="100" type="number" id="children-number" name="number-of-children" placeholder="2">
+            <button type="button" onclick="this.previousElementSibling.stepUp()" class="increase-number">
               <span class="visually-hidden">Увеличить количество детей</span>
-            </a>
+            </button>
           </div>  <!--  guests-container  -->
         </div>    <!--    guests-number    -->
         <button class="blue-button modal-find-button" type="submit">Найти</button>

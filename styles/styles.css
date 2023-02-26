@@ -849,12 +849,31 @@ body {
   text-align: center;
   font-size: 18px;
   line-height: 20px;
+  outline: none;
 }
 
 .number-input::placeholder {
   opacity: 1;
   text-align: center;
 }
+
+/*  Убираем дефолтные spin-button в браузерах  */
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.guests-container input[type="number"],
+.guests-container input[type="number"]:hover,
+.guests-container input[type="number"]:focus {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
 
 .tooltip {
   position: absolute;
@@ -916,6 +935,8 @@ body {
 }
 
 .increase-number {
+  margin: 0;
+  padding: 0;
   position: absolute;
   display: block;
   box-sizing: border-box;
@@ -925,6 +946,9 @@ body {
   width: 20px;
   height: 20px;
   outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .increase-number::before,
@@ -943,6 +967,8 @@ body {
 }
 
 .decrease-number {
+  margin: 0;
+  padding: 0;
   position: absolute;
   display: block;
   box-sizing: border-box;
@@ -952,6 +978,9 @@ body {
   width: 20px;
   height: 20px;
   outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .decrease-number::before {
