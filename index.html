@@ -60,7 +60,7 @@
 
         <ul class="advantages-list">
           <li class="advantages-item-image">
-            <div class="advantages-item">
+            <div class="advantages-item blue">
               <h3 class="item-title white">Настоящий городок</h3>
               <p class="advantages-text white">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
@@ -84,7 +84,7 @@
 
           <li class="advantages-item-image">
             <img src="images/bridge.jpg" width="800" height="385" alt="Фото моста Дьявола в горах.">
-            <div class="advantages-item">
+            <div class="advantages-item blue">
               <h3 class="item-title white">Там есть мост дьявола</h3>
               <p class="advantages-text white">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
@@ -139,7 +139,7 @@
           <label class="visually-hidden" for="subscribe-email">email</label>
           <input type="email" id="subscribe-email" name="subscribe-email" class="subscribe-field" placeholder="Ваш e-mail" required>
           <button class="blue-button subscribe-button" type="submit">
-            <span>Подписаться</span>
+            Подписаться
           </button>
         </form>
 
@@ -188,18 +188,18 @@
         <div class="check-date">
           <label class="check-title" for="check-in-date">Дата заезда:</label>
           <input class="check-input" type="text" id="check-in-date" name="check-in-date" placeholder="Укажите дату" required>
-          <a href="#" class="check-date-icon">
+          <button type="button" class="check-date-icon">
             <span class="visually-hidden">Выбрать дату в календаре</span>
-          </a>
+          </button>
           <span class="message error">Мы не можем отправить вас в прошлое.</span>
         </div>  <!--  check-date  -->
 
         <div class="check-date">
           <label class="check-title" for="check-out-date">Дата выезда:</label>
           <input class="check-input" type="text" id="check-out-date" name="check-out-date" placeholder="Укажите дату" required>
-          <a href="#" class="check-date-icon">
+          <button type="button" class="check-date-icon">
             <span class="visually-hidden">Выбрать дату в календаре</span>
-          </a>
+          </button>
           <span class="message success">На эти даты есть свободные номера. Пока есть.</span>
         </div>  <!--  check-date  -->
 
@@ -209,7 +209,7 @@
             <button type="button" onclick="this.nextElementSibling.stepDown()" class="decrease-number">
               <span class="visually-hidden">Уменьшить количество взрослых</span>
             </button>
-            <input class="check-input number-input" min="0" max="100" type="number" id="adults-number" name="number-of-adults" placeholder="2">
+            <input class="check-input number-input" min="0" max="100" type="number" id="adults-number" name="number-of-adults" placeholder="2" required>
             <button type="button" onclick="this.previousElementSibling.stepUp()" class="increase-number">
               <span class="visually-hidden">Увеличить количество взрослых</span>
             </button>
@@ -225,7 +225,7 @@
             <button type="button" onclick="this.nextElementSibling.stepDown()" class="decrease-number">
               <span class="visually-hidden">Уменьшить количество детей</span>
             </button>
-            <input class="check-input number-input" min="0" max="100" type="number" id="children-number" name="number-of-children" placeholder="2">
+            <input class="check-input number-input" min="0" max="100" type="number" id="children-number" name="number-of-children" placeholder="2" required>
             <button type="button" onclick="this.previousElementSibling.stepUp()" class="increase-number">
               <span class="visually-hidden">Увеличить количество детей</span>
             </button>
