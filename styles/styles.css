@@ -285,16 +285,21 @@ body {
   align-items: center;
 }
 
+.advantages-item.blue {
+  padding-top: 102px;
+  padding-bottom: 102px;
+}
+
 .advantages-item {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 113px;
+  padding-bottom: 112px;
   box-sizing: border-box;
   width: 400px;
   min-height: 385px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .advantages-item:nth-child(even) {
@@ -347,6 +352,7 @@ body {
 .advantages-text {
   margin: 0;
   max-width: 240px;
+  color: #333333;
 }
 
 
@@ -378,43 +384,49 @@ body {
 }
 
 .services-item {
+  padding: 183px 0 81px 0;
   width: 400px;
   min-height: 385px;
+  position: relative;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .services-item.house::before {
+  position: absolute;
   content: url("../images/icons/house.svg");
   width: 75px;
   height: 72px;
-  top: 0;
-  left: 0;
+  top: 81px;
+  left: 163px;
   z-index: 1;
 }
 
 .services-item.burger::before {
+  position: absolute;
   content: url("../images/icons/food.svg");
   width: 74px;
   height: 70px;
-  top: 0;
-  left: 0;
+  top: 82px;
+  left: 163px;
   z-index: 1;
 }
 
 .services-item.box::before {
+  position: absolute;
   content: url("../images/icons/box.svg");
   width: 64px;
   height: 76px;
-  top: 0;
-  left: 0;
+  top: 79px;
+  left: 168px;
   z-index: 1;
 }
 
 .services-title {
-  margin: 30px 0;
+  margin: 0 0 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -436,10 +448,12 @@ body {
 /*  Section hotel-look  */
 
 .hotel-look {
+  padding: 96px 0;
   min-height: 406px;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -470,6 +484,8 @@ body {
 /*  Section subscribe  */
 
 .subscribe {
+  padding: 20px 0;
+  box-sizing: border-box;
   min-height: 415px;
   display: flex;
   flex-direction: column;
@@ -483,7 +499,7 @@ body {
 }
 
 .subscribe .review-title {
-  margin-top: 96px;
+  margin-top: 76px;
 }
 
 .review-title.white {
@@ -797,6 +813,8 @@ body {
   height: 15px;
   background: url("../images/icons/calendar.svg") center no-repeat;
   opacity: 0.3;
+  border: none;
+  cursor: pointer;
 }
 
 /*  Информационные и error сообщения  */
@@ -1276,11 +1294,13 @@ body {
 
 .price-number {
   margin: 0;
-  padding: 12px 20px;
+  padding: 10px 18px;
   width: 143px;
   box-sizing: border-box;
   font: inherit;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
   background-color: #f2f2f2;
   border: 2px solid #f2f2f2;
   border-radius: 0 4px 4px 0;
@@ -1386,13 +1406,12 @@ body {
 .filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .filter-submit-button {
   min-width: 191px;
   min-height: 36px;
-  margin: 0;
+  margin: 56px 0 32px 0;
   background-color: #82b3d3;
   color: #ffffff;
   font-weight: 700;
@@ -1405,7 +1424,6 @@ body {
 }
 
 .filter-reset-button {
-  margin-top: 32px;
   min-width: 191px;
   min-height: 36px;
   background-color: inherit;
@@ -1437,6 +1455,7 @@ body {
 .select-result {
   margin: 0;
   padding: 0;
+  max-width: 508px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
